@@ -1,9 +1,18 @@
 This is a snippet repository for UI mockup, diagram as code and data model illustration, using plantuml and mermaid.
 
 # UI
+## All Together
+<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
 
-## Components
-### Window
+
+  ## Components 
+  
+<details>
+  
+
+  <summary>Show Components</summary>
+
+  ### Window
 <img src="https://github.com/user-attachments/assets/6f039b34-918f-437e-a152-2078656e23ff" width=500>
 <details>
   
@@ -73,7 +82,53 @@ skinparam backgroundcolor #FEFFFF
 <summary>Show Code</summary>
   
 ```puml
+@startsalt
+skinparam backgroundcolor #FEFFFF
 
+{
+{*  Wizard}
+{+
+'Left Menu
+{/
+    Step 1    
+    <b>Step 2    
+    <color:gray>Step 3    
+}|
+{
+    { 
+      <b>Step Name
+            {.}
+
+        {
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+          
+{.}
+        {
+        }
+        } 
+        
+
+    }
+    --
+{                                                 |[Back] | [Next]|}
+}
+}
+}
+@endsalt
 ```
 
 </details>
@@ -87,7 +142,48 @@ skinparam backgroundcolor #FEFFFF
 <summary>Show Code</summary>
   
 ```puml
+@startsalt
+skinparam backgroundcolor #FEFFFF
 
+{
+{*  Modal}
+{+
+
+{
+    { 
+      <b>Step Name
+            {.}
+
+        {
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+          
+{.}
+        {
+        }
+        } 
+        
+
+    }
+    --
+{                                                 |[Back] | [Next]|}
+}
+}
+}
+@endsalt
 ```
 
 </details>
@@ -95,13 +191,42 @@ skinparam backgroundcolor #FEFFFF
 ### Hierarchical Table
 <img src="https://github.com/user-attachments/assets/bca6d2d7-5fd2-4eb8-93ff-c79184c887e8" width=500>
 
-![image]()
 <details>
   
 <summary>Show Code</summary>
   
 ```puml
-
+@startsalt
+{<b> Table Name
+    {
+        {
+        {[Action]|  |
+        ^ Menu ^|
+        ^ Menu ^^ Option 1 ^^ Option 2 ^}
+    }
+      
+    {                             🝖 ▥ ⟳  }
+    
+    {T-
+        ☐ <b>Column|<b>Column |<b>Column |<b> Column | <b>Column
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+        ++ ☐ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+        ++ ☐ 2Level|  ⚠️ | Attribute      |Attribute| Attribute Attribute
+        +++ ☐ 3Level|❌| Attribute      |Attribute| Attribute Attribute
+        ☑ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+        ++ ☑ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+        ++ ☑ 2Level|  ⚠️ | Attribute      |Attribute| Attribute Attribute
+        +++ ☑ 3Level|❌| Attribute      |Attribute| Attribute Attribute
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+        ++ ☐ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+        ++ ☐ 2Level|  ✅ | Attribute      |Attribute| Attribute Attribute
+        +++ ☐ 3Level|✅| Attribute      |Attribute| Attribute Attribute
+}
+{.}
+}
+}
+@endsalt
 ```
 
 </details>
@@ -115,20 +240,75 @@ skinparam backgroundcolor #FEFFFF
 <summary>Show Code</summary>
   
 ```puml
-
+@startsalt
+{
+    <b> Table Name
+                                      🝖 ▥ ⟳
+    {T-
+        ☐ <b>Column|<b>Column |<b>Column |<b> Column | <b>Column
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+         ☐ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+         ☐ 2Level|  ⚠️ | Attribute      |Attribute| Attribute Attribute
+         ☐ 3Level|❌| Attribute      |Attribute| Attribute Attribute
+        ☑ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+         ☑ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+         ☑ 2Level|  ⚠️ | Attribute      |Attribute| Attribute Attribute
+         ☑ 3Level|❌| Attribute      |Attribute| Attribute Attribute
+        ☐ 1Level|  ✅ |  Attribute       |Attribute | Attribute Attribute
+         ☐ 2Level|  ✅ |  Attribute       |Attribute| Attribute Attribute
+         ☐ 2Level|  ✅ | Attribute      |Attribute| Attribute Attribute
+         ☐ 3Level|✅| Attribute      |Attribute| Attribute Attribute
+}
+}
+@endsalt
 ```
 
 </details>
 
 ### Tabbed Interface
 <img src="https://github.com/user-attachments/assets/7cdf7d83-9e89-4144-8dbd-eb813bb0557b" width=500>
-![image](https://github.com/user-attachments/assets/7cdf7d83-9e89-4144-8dbd-eb813bb0557b)
+
 <details>
   
 <summary>Show Code</summary>
   
 ```puml
+@startsalt
+{{
+  {/ Tab  | Tab | Tab | <b>Selected Tab }
 
+{.}
+Message to the user
+--
+{
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+        
+          
+{.}
+        {
+        }
+        } 
+        
+    }
+    
+{                                    |[Cancel]| [Action]}}
+
+@endsalt
 ```
 
 </details>
@@ -142,23 +322,37 @@ skinparam backgroundcolor #FEFFFF
 <summary>Show Code</summary>
   
 ```puml
+@startsalt
+{
+{^==Widget
+ Note on top
+ <img:https://plantuml.com/logo3.png>
+}|
+    {^==Widget
+note
+ <img:https://plantuml.com/logo3.png>
+}
 
+
+{^==Widget
+ second row first column
+ <img:https://plantuml.com/logo3.png>
+}|
+  {^==Widget
+ second row 2nd column
+ <img:https://plantuml.com/logo3.png>
+}
+}
+
+@endsalt
 ```
 
 </details>
 
-## All Together
-<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
-
-<details>
-  
-<summary>Show Code</summary>
-  
-```puml
-
-```
-
 </details>
+
+
+
 
 # Graphs
 
