@@ -1,0 +1,51 @@
+@startsalt
+skinparam backgroundcolor #FEFFFF
+{ 
+    {+
+
+
+{*  Window Title                                                                                        🗔  X}
+' Header
+    { 
+{}
+    {+ 🔒  https://host.subdomain.domain.com   }
+  
+' LeftNav
+{}
+    {T 
+        + Item
+        + Item
+        ++ Item
+        ++ Item
+        ++ Item
+        + Item
+        + Item
+        ++ Item
+        ++ Item
+        ++ Item
+        + Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+        ++ Item
+
+    }|
+' MainPanel
+
+
+' endMainPanel
+
+    }
+
+}
+<b>RBAC:</b> Groups
+<b>Good/Better/Best</b>: Level
+}
+
+
+@endsalt
