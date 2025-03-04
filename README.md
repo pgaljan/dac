@@ -32,10 +32,29 @@ PlantUML and Mermaid snippet repository for
 # Data Model Illustration
 
 ## JSON
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+
+```
+
+</details>
 
 ## YAML
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+
+```
+
+</details>
 
 ## ERD
+
 
 ## Hierarchy
 <img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=75>
@@ -88,7 +107,7 @@ title Regex Parsing
 <img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
 
 
-  ## Components 
+## Components 
   
 <details>
   
