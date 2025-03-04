@@ -1,0 +1,21 @@
+@startyaml
+title YAML
+Microsoft:
+  O365: ""
+  Power Platform: ""
+  VSCode:
+  - PlantUML
+  - Draw.io
+  - Mermaid
+Miro:
+- PlantUML
+- Draw.io
+- Mermaid
+Atlassian:
+- Jira
+- Confluence
+- Align
+Adobe:
+- Figma
+- FigJam
+@endyaml
