@@ -38,7 +38,7 @@ PlantUML and Mermaid snippet repository for
 ## ERD
 
 ## Hierarchy
-<img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=500>
+<img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=75>
 
 <details>
   
