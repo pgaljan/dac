@@ -1,0 +1,51 @@
+@startsalt
+
+
+
+
+
+{
+{T
++ TrustNet Offerings
+++ Service Management
+
++++Operations
+++++Infrastructure Lifecycle
+++++Software Lifecycle
+++++Service Requests
+
+
++++Optimization
+++++Cost Optimization
+++++Service Optimization
+
+++Identity & Security
++++RBAC Policies
++++API Management
++++Policies
++++Auditing
++++Compliance
+++++SOC 2
+++++HIPAA
+
+
+++Service Integration
++++Hyperscaler Plugins
+++++Compute
+++++Network
+++++Storage
+++++Data
+++++AI/ML
+++++Developer Tools
+++++Monitoring/Management
+++++SaaS Integration
++++Enterprise Plugins
+++++ServiceNow
+++++JIRA
+++++Salesforce
+}
+}
+
+
+
+@endsalt
