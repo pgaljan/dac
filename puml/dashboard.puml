@@ -4,8 +4,9 @@
  Note on top
  <img:https://plantuml.com/logo3.png>
 }|
-{^==Widget
- note to the side <img:https://plantuml.com/logo3.png>
+    {^==Widget
+note
+ <img:https://plantuml.com/logo3.png>
 }
 
 
@@ -13,8 +14,8 @@
  second row first column
  <img:https://plantuml.com/logo3.png>
 }|
-{^==Widget
- second row second column
+  {^==Widget
+ second row 2nd column
  <img:https://plantuml.com/logo3.png>
 }
 }
