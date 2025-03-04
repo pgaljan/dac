@@ -5,7 +5,7 @@ PlantUML and Mermaid snippet repository for
 
 # Diagram as Code
 ## Component
-<img src="https://github.com/user-attachments/assets/c1d26e52-a12b-4d67-a20f-77ef6805516c" width=200>
+<img src="https://github.com/user-attachments/assets/c1d26e52-a12b-4d67-a20f-77ef6805516c" width=800>
 
 <details>
   
@@ -171,7 +171,7 @@ Draw.io --> Custom
 # Data Model Illustration
 
 ## JSON
-<img src="https://github.com/user-attachments/assets/afd3da66-1406-4d8d-ad00-f3a1a85faa33" width=200>
+<img src="https://github.com/user-attachments/assets/afd3da66-1406-4d8d-ad00-f3a1a85faa33" width=500>
 <details>
   
 <summary>Show Code</summary>
@@ -212,7 +212,7 @@ title JSON
 
 ## YAML
 
-<img src="https://github.com/user-attachments/assets/8c9df903-7291-4082-9117-c73fa8ba9ff4" width=200>
+<img src="https://github.com/user-attachments/assets/8c9df903-7291-4082-9117-c73fa8ba9ff4" width=500>
 <details>
   
 <summary>Show Code</summary>
@@ -247,7 +247,7 @@ Adobe:
 
 
 ## Hierarchy
-<img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=75>
+<img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=150>
 
 <details>
   
@@ -275,7 +275,7 @@ Adobe:
 </details>
 
 ## Parse
-<img src="https://github.com/user-attachments/assets/b877d12c-ae62-4583-9123-12345e801ac4" width=200>
+<img src="https://github.com/user-attachments/assets/b877d12c-ae62-4583-9123-12345e801ac4" width=500>
 
 <details>
   
@@ -294,7 +294,7 @@ title Regex Parsing
 # UI Mockup
 
 ## All Together
-<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=200>
+<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=800>
 
 
 ## Components 
