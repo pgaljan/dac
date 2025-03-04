@@ -1,28 +1,28 @@
 graph LR
 
-subgraph Authoring
-    Miro
-    FigJam
-    O365
-    Confluence
+subgraph Group 1
+    Item1
+    Item2
+    Item3
+    Item4
 end
 
-subgraph Systems of Record
-    Jira
-    Figma
+subgraph Group 2
+    Item5
+    Item6
 end
 
-subgraph Reporting
-    Power[Power Platform]
-    JiraReport[Jira Reporting]
+subgraph Group 3
+    Item7
+    Item8
 end
 
-Confluence --> Jira
-O365 --> Jira
-Miro --> Figma
-Miro --> Jira
-FigJam --> Figma
-Figma --> Jira
+Item4 --> Item5
+Item3 --> Item5
+Item1 --> Item6
+Item1 --> Item5
+Item2 --> Item6
+Item6 --> Item5
 
-Jira --> JiraReport
-JiraReport --> Power
+Item5 --> Item8
+Item8 --> Item7
