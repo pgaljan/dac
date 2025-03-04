@@ -1,0 +1,34 @@
+@startuml
+skinparam componentStyle rectangle
+
+title Component Diagram
+
+node "Microsoft" {
+    component "Power Platform"
+    component O365
+    node VSCode {
+        component PlantUML as vscode.PlantUML
+        component Mermaid as vscode.Mermaid
+    }
+}
+
+
+
+node "Miro" {
+    component PlantUML as miro.PlantUML
+    component Mermaid as miro.Mermaid
+
+    () renderer as renderer.PlantUML
+    () renderer as renderer.Mermaid
+}
+
+cloud cloud 
+
+
+vscode.PlantUML -> cloud : render
+vscode.Mermaid -> cloud : render
+miro.PlantUML <-> renderer.PlantUML
+miro.Mermaid <-> renderer.Mermaid
+
+
+@enduml
