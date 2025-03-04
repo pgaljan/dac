@@ -1,0 +1,5 @@
+@startregex
+title Regex Parsing
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,63})$/
+@endregex
