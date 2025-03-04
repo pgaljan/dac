@@ -1,0 +1,63 @@
+@startwbs
+
+
+
+title TrustNet Offerings
+<style>
+node {
+    Padding 1
+    Margin 0
+    HorizontalAlignment left
+    LineThickness 0
+    MaximumWidth 125
+
+}
+
+
+
+
+
+</style>
+
+
++_ TrustNet Offerings
+++_ Service Management
+
++++_ Operations
+++++_ Infrastructure Lifecycle
+++++_ Software Lifecycle
+++++_ Service Requests
+
+
++++_ Optimization
+++++_ Cost Optimization
+++++_ Service Optimization
+
+++_ Identity & Security
++++_ RBAC Policies
++++_ API Management
++++_ Policies
++++_ Auditing
++++_ Compliance
+++++_ SOC 2
+++++_ HIPAA
+
+
+++_ Service Integration
++++_ Hyperscaler Plugins
+++++_ Compute
+++++_ Network
+++++_ Storage
+++++_ Data
+++++_ AI/ML
+++++_ Developer Tools
+++++_ Monitoring/Management
+++++_ SaaS Integration
++++_ Enterprise Plugins
+++++_ ServiceNow
+++++_ JIRA
+++++_ Salesforce
+
+
+
+@endwbs
