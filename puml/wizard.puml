@@ -1,0 +1,47 @@
+@startsalt
+skinparam backgroundcolor #FEFFFF
+
+{
+{*  Wizard}
+{+
+'Left Menu
+{/
+    Step 1    
+    <b>Step 2    
+    <color:gray>Step 3    
+}|
+{
+    { 
+      <b>Step Name
+            {.}
+
+        {
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+          
+{.}
+        {
+        }
+        } 
+        
+
+    }
+    --
+{                                                 |[Back] | [Next]|}
+}
+}
+}
+@endsalt
