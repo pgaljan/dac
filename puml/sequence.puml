@@ -1,21 +1,21 @@
 @startuml
 !pragma teoz true
     participant author
-    queue miro as "author\nrepo"
+    queue collab as "research\nrepo"
     participant stakeholder
     queue "Project Mgmt\nSystem"
     participant approver
 
 group collaborative authoring
-    author --> miro : create artifact
+    author --> collab : create artifact
     author --> stakeholder : "please review"
-    stakeholder --> miro : review and\ncomment
-    author --> miro : edit
+    stakeholder --> collab : review and\ncomment
+    author --> collab : edit
 end group
 
 group backlog refinement
-    author --> miro
-        &miro --> "Project Mgmt\nSystem" 
+    author --> collab
+        &collab --> "Project Mgmt\nSystem" 
     approver --> "Project Mgmt\nSystem" : review
     approver <--> stakeholder : confer
     approver --> "Project Mgmt\nSystem" : comment
