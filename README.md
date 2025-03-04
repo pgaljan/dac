@@ -294,7 +294,7 @@ title Regex Parsing
 # UI Mockup
 
 ## All Together
-<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=800>
+<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
 
 
 ## Components 
