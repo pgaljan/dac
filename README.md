@@ -1,7 +1,86 @@
 PlantUML and Mermaid snippet repository for 
-* [UI Mockup](#UI-Mockup)
 * [Diagram as Code](#diagram-as-code)
 * [Data Model Illustration](#data-model-illustration)
+* [UI Mockup](#UI-Mockup)
+
+# Diagram as Code
+
+
+## Graphs
+
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+
+```
+
+</details>
+
+## Block
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+
+```
+
+</details>
+
+# Data Model Illustration
+
+## JSON
+
+## YAML
+
+## ERD
+
+## Hierarchy
+<img src="https://github.com/user-attachments/assets/30900eaa-2ea5-4369-8bf1-babea147444b" width=500>
+
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+@startsalt
+{
+{T 
+        + Item
+        + Item
+        ++ Item
+        ++ Item
+        +++ Item
+        ++ Item
+        + Item
+        + Item
+        ++ Item
+
+    }
+}
+@endsalt
+```
+
+</details>
+
+## Parse
+<img src="https://github.com/user-attachments/assets/b877d12c-ae62-4583-9123-12345e801ac4" width=500>
+
+<details>
+  
+<summary>Show Code</summary>
+  
+```puml
+@startregex
+title Regex Parsing
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,63})$/
+@endregex
+```
+
+</details>
 
 # UI Mockup
 
@@ -354,34 +433,3 @@ note
 </details>
 
 </details>
-
-# Diagram as Code
-
-
-## Graphs
-
-<details>
-  
-<summary>Show Code</summary>
-  
-```puml
-
-```
-
-</details>
-
-## Block
-<details>
-  
-<summary>Show Code</summary>
-  
-```puml
-
-```
-
-</details>
-
-# Data Model Illustration
-## JSON
-## YAML
-## ERD
