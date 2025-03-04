@@ -1,0 +1,42 @@
+@startsalt
+skinparam backgroundcolor #FEFFFF
+
+{
+{*  Modal}
+{+
+
+{
+    { 
+      <b>Step Name
+            {.}
+
+        {
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+          
+{.}
+        {
+        }
+        } 
+        
+
+    }
+    --
+{                                                 |[Back] | [Next]|}
+}
+}
+}
+@endsalt
