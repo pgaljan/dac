@@ -1,0 +1,22 @@
+@startsalt
+{
+{^==Widget
+ Note on top
+ <img:https://plantuml.com/logo3.png>
+}|
+{^==Widget
+ note to the side <img:https://plantuml.com/logo3.png>
+}
+
+
+{^==Widget
+ second row first column
+ <img:https://plantuml.com/logo3.png>
+}|
+{^==Widget
+ second row second column
+ <img:https://plantuml.com/logo3.png>
+}
+}
+
+@endsalt
