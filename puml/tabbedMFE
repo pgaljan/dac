@@ -1,0 +1,35 @@
+@startsalt
+{{
+  {/ Tab  | Tab | Tab | <b>Selected Tab }
+
+{.}
+Message to the user
+--
+{
+          Attribute:  | "User-defined value  " 
+          <i>Note |          {<i>Lorem ipsum 
+        <i>Lorem iupsum}
+        {.}
+        Textbox  |
+        {SI
+    something for the user to type into
+    
+                                           
+}
+        {.}
+        () Bullet| 
+        (X) Bullet
+        [ ] check|
+        [X] Check
+        
+          
+{.}
+        {
+        }
+        } 
+        
+    }
+    
+{                                    |[Cancel]| [Action]}}
+
+@endsalt
