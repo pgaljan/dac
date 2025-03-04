@@ -1,6 +1,10 @@
-This is a snippet repository for UI mockup, diagram as code and data model illustration, using plantuml and mermaid.
+PlantUML and Mermaid snippet repository for 
+* [UI Mockup](#UI-Mockup)
+* [Diagram as Code](#diagram-as-code)
+* [Data Model Illustration](#data-model-illustration)
 
-# UI
+# UI Mockup
+
 ## All Together
 <img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
 
@@ -351,10 +355,10 @@ note
 
 </details>
 
+# Diagram as Code
 
 
-
-# Graphs
+## Graphs
 
 <details>
   
@@ -366,7 +370,7 @@ note
 
 </details>
 
-# Block
+## Block
 <details>
   
 <summary>Show Code</summary>
@@ -376,3 +380,8 @@ note
 ```
 
 </details>
+
+# Data Model Illustration
+## JSON
+## YAML
+## ERD
