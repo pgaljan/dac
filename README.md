@@ -605,6 +605,55 @@ Message to the user
 
 </details>
 
+### Unicode
+<img src="https://github.com/user-attachments/assets/f54f5f5c-fbe0-4bcb-8ddc-ad1c7dae7cff" width=200>
+
+
+<details>
+
+```puml
+@startsalt
+{+Unicode
+  {🗀
+  🗔
+  𝄘
+  ©
+  ®
+  ⏴
+  ⏵
+  ⏶
+  ⏷
+  ⛔
+  ✅
+  ✨
+  ❌
+  ❎
+  {➕  |
+  ➖}
+  }|
+{ ❗
+  ❕
+  ❔
+  ❓
+  ⭐
+  ⭕
+  {🔁 |
+  🔃  |
+  📶 |
+  🔀 |
+  🔂 |
+  🔄   }
+  {🔓 |
+  🔒 |
+  🔑}
+  {🔔 |
+  🔕}
+  }
+```
+@endsalt
+  
+</details>
+
 ### Dashboard Layout
 <img src="https://github.com/user-attachments/assets/d74c4c3d-d825-4cd6-87c9-ddedfcfea729" width=200>
 
@@ -615,33 +664,45 @@ Message to the user
 ```puml
 @startsalt
 {
-{^==Widget
-bubble
- <img:https://media-hosting.imagekit.io//2fae303bfcd749b1/bubble.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=R9rOY~vKp8NgMyi9KL4dG9EMWjEfCtGpIVQaY-AFBdCb4L2NyY3l12X4wSK2aLEftWWOj~ypPhJ5xMUBwS0Mxn0MCYOC1dTmC210kE8HRaJwJu9f~NITkVuMeBkDp1IoAOMrodcPnrCwut6jU~DM1GcJ4olamzeugrbKSpl9GO83J4mpBXICWY5IrjU2xPwl9nwr31KCZi3KLByDAuuSEOQEJeDqDQlPFOhN~7yiq~GGdViUIUKjS4LF7XWWjWVUFDdAQMKOMXZ0ADxcy~cDZxGslA9ASzTEHshKCQkLc8CX3YDLEenWE0rwrdojLuYNRll7co2p-3gIltyOwMb89Q__>
+{^==bubble
+
+  <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/bubble.png>
+ 
+ 
+ 
+ 
+ 
+{}
 }|
-    {^==Widget
-map                                                              
- <img:https://media-hosting.imagekit.io//40e6acba9f28472d/map.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mbaxRyIWOgYu06oXfgOwfeXjMGy5vh8YeafxPOa1V76reCjtvfnff0FXapR5P4gmSR~0FB4z0W5nI6pvC35t9nAzRYV8swNkA9Q-dQ39qRsak3zXtbT2ANQxFdb-FoMvjdZ5F9sv68uJuwxS~PRJXcy0jxZNm-Aovf9G~GRX4dgpJlsIcyFarEOHViv9AbsOqNQR9r~Ird-K9NT2B0uU9RtQa1yfQ0xTohRiYx3QwFZyRiTRD2vFBxn0PLRJmiOqcGmqwFe5UJUGtydHLgrrDYtDEn~e2qi7tQ1LLuW9qZctqXjMy2~IHO6164T8Z9DcOrHnXZlecawWT6hvhadnlw__>
+    {^==map
+                                                                  
+  <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/map.png>
+
  { }
 }
 
 
-{^==Widget
- scatter
- <img:https://media-hosting.imagekit.io//1b34e00a65c340ac/scatter.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WCU2FX1sKinyW48QYnHhRg0R-i7PmraHlEnShOiNx4jRXcQLG-tZRfht7uhX2kBuMoDaIM7-3HNQ4doiYalCr~MhAzUKIGv~7~KMf9jYlJVHdKha3sns4XxJVdM2-LkP40qObgSpbyqxcJ-PATz1HfEW2-nyYL99Aqg3aQy-zv9T9FBFdJAyBhpV9pXNifIEP67iZxmHu3IDTPxh2ia2lQpObNwm8iMDKzI1foOMUFmS4x5j81QWVPJMbC8s~1Ig6rRocy5ajvjyE1fvOlcwFuB0GpWsMr-sY9RCliE0nLOkR2Boj5gfa4zTdPOSJhmt9mtcT9ReEzBVWffU1Kx0Qw__>
+{^==scatter
+ 
+  <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/scatter.png>
+  }|
+  {^==veritcal bar
+ 
+ <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/vbar.png>
+ }
+{^==horizontal bar
+ 
+ <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/hbar.png>
 }|
-  {^==Widget
- veritcal bar
- <img:https://media-hosting.imagekit.io//1145c82bd7b34aab/vbar.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wroDe8AuqIJoSLOTL3k48syBnuheI1FxhE07b15nDKcaO8kY0LaYHrYJEaG5GCPcu5dLK-q689azjvXowaT~IY29jdNzSDzGpswStQjGQrwRWybrQW2vz2qZRpVc4gjnjEUPM6bv-NtdoqM3vOiqnXnxkcS44EBvSn2zqE-cTui45ohd6Vfo4hvfi3unfDgxHgZvBILyUZBB9NbfaBb~LCv9oMaTO891YUQURHSlXGp-HJBszqB0XDhqKH4aeofApdMP-9ywHVv0d6lw0KTAtAA-0EJ~UNM5KC2bSkrpx7CqfQAWQfUtWb3ZobigcD8GGSzKmaMQorutrACRlojSeg__>
+  {^==line
+ 
+ <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/line.png>
 }
-{^==Widget
- horizontal bar
- <img:https://media-hosting.imagekit.io//44b5f9e84ae84c53/hbar.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UI0CRln6ypdfyFj8ejABctX95NxtXMypZgrImH7XvU5rZhY6sWLya0twzX-Vbc8-BHU1PIo1VuJdOew8SNQA0TfUPgh~wuWcCsvdAhiDQwc7w1WEcqwFgbz3elFY4VwBE-gc2JT4HiZNg~OKVy~ef2sj87JcbwTFq5hqajCr-lT6xjdEq-DT18TLrSIyv-Vd3zYyTBxVUjCrT4q-6E-i7i5wmZefEkL1BuUMWFTtx6p-v4wmUnTrGgebey1Ewa8T5JBdodQNEr36uy56dNVEbiuR3LivSDAMPxJL5Y6hqKThen0~9ONL1RjLqA~b70NbG27iI1KBm1kM9rMXPKMEhQ__>
-}|
-  {^==Widget
- line
- <img:https://media-hosting.imagekit.io//eddc2729329f4227/line.png?Expires=1835783351&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=y4EFY~mkx2CmjM~7iS-~xY6DqTnCTzOxOaIQezROnM-W5Cg40qYZAnv-yvN7Ec0-diOym3Ff5FHFMyyWL4DQ5vpLz~zlETEFKojq9TS7SsO3WHFkLe7B88M~OC02LxdmgTVlGDs0V2lvEHkHFwkbjl7d72hjvKv6-AIFlF78LHkoOKj8aBTYpHn20zheYaRBl9ms6mMacaRVEluVoJTSkJtLm994Ww9xUMtps9FJVn6hmeaqCWXUEW52r9Zv-Co15po2KttzdQH1yjP7zEOeU9-z-Zo8mwM0MtVbYJhwVzyV9hB5Ikd9TLMo0T8tGgdJAPb18606Oq8-3-jPvnWkcw__>
+  {^==graph
+ 
+ <img:https://raw.githubusercontent.com/pgaljan/dac/main/img/graph.png>
 }
+
 }
 
 @endsalt
