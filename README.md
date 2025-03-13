@@ -1,4 +1,5 @@
-PlantUML and Mermaid snippet repository for 
+PlantUML and Mermaid snippet repository for rapid diagramming and UI ideation
+
 * [Simple Sprite Library](#simple-sprite-library)
 * [Diagram as Code](#diagram-as-code)
 * [Data Model Illustration](#data-model-illustration)
@@ -96,6 +97,7 @@ rectangle edge {
 
 ## Architecture Sprites
 <img src="./img/arch.png" width=800>
+
 <details>
 
 <summary>Show Code</summary>
@@ -146,6 +148,7 @@ card "<$cloud-wireless> cloud-wireless"
 
 @enduml
 ```
+</details>
 
 ## Icon Sprites
 <img src="./img/icons1.png" width=800>
