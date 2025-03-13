@@ -269,17 +269,20 @@ card "<$vmware> vmware"
 }
 
 rectangle combinations{
-card "<$server-tower><$vmware*.5> bare metal vmware"
-card "<$aws><$vmware*.5> vmw on aws"
-card "<$azure><$vmware*.5> vmw on azure"
-card "<$gcp><$vmware*.5> vmw engine for gcp"
-card "<$server-tower><$windows*.5> bare metal windows"
-card "<$server-tower><$ubuntu*.5> bare metal ubuntu"
-card "<$server-tower><$windows*.5> bare metal windows"
-card "<$server-tower><$kubernetes*.5> bare metal k8s"
-card "<$server-tower><$vmware*.6> bare metal vmware"
+card "<$aws><$vmware*.7> vmw on aws"
+card "<$azure><$vmware*.7> vmw on azure"
+card "<$gcp><$vmware*.7> vmw engine for gcp"
+card "<$server-tower><$windows*.7> bare metal windows"
+card "<$server-tower><$ubuntu*.7> bare metal ubuntu"
+card "<$server-tower><$windows*.7> bare metal windows"
+card "<$server-tower><$kubernetes*.7> bare metal k8s"
+card "<$server-tower><$vmware*.7> bare metal vmware"
+card "<$server-tower><$vmware*.7>  <$windows*.4> windows on bare metal vmware"
 }
 @enduml
+
+
+
 
 
 ```
