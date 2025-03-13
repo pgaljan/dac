@@ -23,9 +23,9 @@ skinparam backgroundcolor #FEFFFF
 }
         {.}
         () Bullet| 
-        (X) Bullet
+        (X) Filled
         [ ] check|
-        [X] Check
+        [X] filled
           
 {.}
         {
