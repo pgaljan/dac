@@ -6,34 +6,55 @@ PlantUML and Mermaid snippet repository for
 
 # Simple Sprite Library
 
-## Common Architecture Sprites
-<img src="./img/arch.png" width=800>
+
+## Device Sprites
+<img src="./img/devices.png" width=800>
 <details>
 
 <summary>Show Code</summary>
   
 ```puml
-@startuml
-title Common Architecture Sprites
-skinparam backgroundcolor #FEFFFF
-!include <tupadr3/font-awesome/signal>
-sprite datacenter <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M28.94 4.56v-4.56h-25.88v4.56h-2.5v27.44h30.88v-27.44zM5.44 2.36h21.12v2.18h-21.12zM18.44 29.64h-4.88v-6.94h4.88zM29.060 29.64h-8.26v-9.3h-9.6v9.3h-8.26v-22.72h26.12zM8.22 9.84h2.36v2.36h-2.36zM14.84 9.84h2.36v2.36h-2.36zM21.44 9.84h2.36v2.36h-2.36zM8.22 15.22h2.36v2.38h-2.36zM14.84 15.22h2.36v2.38h-2.36zM21.44 15.22h2.36v2.38h-2.36z"></path>
- 
-   </svg> 
 
-sprite switch-blade <svg width="32" height="32" viewBox="0 0 32 32">
-     <path d="M0 10v12h32v-12zM29.56 19.6h-27.12v-7.18h27.12zM20.92 14.78h6.34v2.44h-6.34z"></path>
-   </svg>
-sprite switch-blade-2u <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 2.5v12h32v-12zM29.56 12h-27.12v-7.060h27.12zM20.92 7.28h6.34v2.44h-6.34zM0 29.5h32v-12h-32zM2.44 20h27.12v7.16h-27.12zM20.92 22.26h6.34v2.44h-6.34z"></path>
-   </svg>
+@startuml
+skinparam backgroundcolor #FEFFFF
+
 sprite storage-array <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M0 7.2v17.6h32v-17.6zM29.86 22.66h-27.72v-13.32h27.72zM13.64 11.020h4.6v2.12h-4.6zM13.64 14.9h4.6v2.12h-4.6zM13.64 18.86h4.6v2.12h-4.6zM22 11.020h4.6v2.12h-4.6zM22 14.9h4.6v2.12h-4.6zM22 18.86h4.6v2.12h-4.6zM5.24 11.020h4.6v2.12h-4.6zM5.24 14.9h4.6v2.12h-4.6zM5.24 18.86h4.6v2.12h-4.6z"></path>
    </svg>   
 sprite server <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M0 11.040v10h32v-10zM29.86 18.82h-27.72v-5.64h27.72zM5.34 14.94h21.32v2.12h-21.32z"></path>
    </svg>
+
+sprite modular <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M0 20.96h32v-10h-32zM2.14 13.18h27.72v5.64h-27.72zM0 0v10h32v-10zM29.86 7.78h-27.72v-5.64h27.72zM0 32h32v-10h-32zM2.14 24.22h27.72v5.64h-27.72zM5.34 14.94h21.32v2.12h-21.32zM5.34 26h5.34v2.12h-5.34z"></path>
+   </svg>   
+   
+sprite node <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M0 11.040v10h32v-10zM29.86 18.82h-27.72v-5.64h27.72zM7.16 17.38c0.762 0 1.38-0.618 1.38-1.38s-0.618-1.38-1.38-1.38c-0.762 0-1.38 0.618-1.38 1.38v0c0 0.762 0.618 1.38 1.38 1.38v0z"></path>
+</svg>
+
+sprite rack <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M16.42 0l-11.2 6.62v25.38h21.58v-28.7zM16.42 29.88h-9.1v-22l9.22-5.5v27.5zM23.84 29.88v0l-4.16-1.6v-2.62l4.24 1.68v2.54zM23.84 24.3l-4.24-1.64v-2.66l4.24 1.68v2.56zM23.84 18.66l-4.18-1.62v-2.62l4.34 1.68v2.56zM23.84 13.040l-4.18-1.62v-2.62l4.34 1.68v2.56zM23.84 7.42l-4.18-1.62v-2.62l4.34 1.68v2.56z"></path>
+   </svg> 
+sprite datacenter <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M28.94 4.56v-4.56h-25.88v4.56h-2.5v27.44h30.88v-27.44zM5.44 2.36h21.12v2.18h-21.12zM18.44 29.64h-4.88v-6.94h4.88zM29.060 29.64h-8.26v-9.3h-9.6v9.3h-8.26v-22.72h26.12zM8.22 9.84h2.36v2.36h-2.36zM14.84 9.84h2.36v2.36h-2.36zM21.44 9.84h2.36v2.36h-2.36zM8.22 15.22h2.36v2.38h-2.36zM14.84 15.22h2.36v2.38h-2.36zM21.44 15.22h2.36v2.38h-2.36z"></path>
+ 
+   </svg> 
+sprite switch-blade-2u <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M0 2.5v12h32v-12zM29.56 12h-27.12v-7.060h27.12zM20.92 7.28h6.34v2.44h-6.34zM0 29.5h32v-12h-32zM2.44 20h27.12v7.16h-27.12zM20.92 22.26h6.34v2.44h-6.34z"></path>
+   </svg>
+sprite switch-blade <svg width="32" height="32" viewBox="0 0 32 32">
+     <path d="M0 10v12h32v-12zM29.56 19.6h-27.12v-7.18h27.12zM20.92 14.78h6.34v2.44h-6.34z"></path>
+   </svg>
+sprite tablet-vert <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M4 0v32h24v-32zM26 2.14v19.020h-19.88v-19.020zM6.12 29.86v-6.58h19.76v6.58zM17.48 26.52c0 0.817-0.663 1.48-1.48 1.48s-1.48-0.663-1.48-1.48c0-0.817 0.663-1.48 1.48-1.48v0c0.817 0 1.48 0.663 1.48 1.48v0z"></path>
+   </svg>   
+sprite tablet-horiz <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M0 4v24h32v-24zM29.86 6.12v12.88h-27.72v-12.88zM2.14 25.88v-4.76h27.72v4.76zM17.060 23.46c0 0.585-0.475 1.060-1.060 1.060s-1.060-0.475-1.060-1.060c0-0.585 0.475-1.060 1.060-1.060v0c0.585 0 1.060 0.475 1.060 1.060v0z"></path>
+   </svg>   
+sprite thin-client <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M21.34 0h-10.68v25.78h10.68zM19.2 23.64h-6.4v-21.5h6.42v21.5zM17.080 6.82c0.003 0.030 0.005 0.065 0.005 0.1 0 0.596-0.484 1.080-1.080 1.080-0.002 0-0.003 0-0.005 0h0c-0.619 0-1.12-0.501-1.12-1.12s0.501-1.12 1.12-1.12v0c0 0 0 0 0 0 0.589 0 1.069 0.472 1.080 1.059l0 0.001zM14.94 11.38h2.14v8.62h-2.14zM7.76 28v4h2.24v-2h12.2v2h2.14v-4z"></path>
+   </svg> 
 sprite server-tower <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M7.6 0v32h16.8v-32zM22.28 29.86h-12.56v-27.72h12.56zM11.4 4.2h9.2v2.12h-9.2z"></path>
    </svg>
@@ -42,26 +63,47 @@ sprite desktop <svg width="32" height="32" viewBox="0 0 32 32">
    </svg>   
 sprite mobile <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M6.92 0v32h18.16v-32zM22.92 2.14v2h-13.86v-2zM22.92 6.26v16h-13.86v-16zM9.060 29.86v-5.48h13.88v5.48zM17.4 27.080c0 0.773-0.627 1.4-1.4 1.4s-1.4-0.627-1.4-1.4c0-0.773 0.627-1.4 1.4-1.4v0c0.773 0 1.4 0.627 1.4 1.4v0z"></path>
-   </svg>   
-sprite tablet-vert <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M4 0v32h24v-32zM26 2.14v19.020h-19.88v-19.020zM6.12 29.86v-6.58h19.76v6.58zM17.48 26.52c0 0.817-0.663 1.48-1.48 1.48s-1.48-0.663-1.48-1.48c0-0.817 0.663-1.48 1.48-1.48v0c0.817 0 1.48 0.663 1.48 1.48v0z"></path>
-   </svg>   
-sprite tablet-horiz <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 4v24h32v-24zM29.86 6.12v12.88h-27.72v-12.88zM2.14 25.88v-4.76h27.72v4.76zM17.060 23.46c0 0.585-0.475 1.060-1.060 1.060s-1.060-0.475-1.060-1.060c0-0.585 0.475-1.060 1.060-1.060v0c0.585 0 1.060 0.475 1.060 1.060v0z"></path>
-   </svg>   
-sprite modular <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 20.96h32v-10h-32zM2.14 13.18h27.72v5.64h-27.72zM0 0v10h32v-10zM29.86 7.78h-27.72v-5.64h27.72zM0 32h32v-10h-32zM2.14 24.22h27.72v5.64h-27.72zM5.34 14.94h21.32v2.12h-21.32zM5.34 26h5.34v2.12h-5.34z"></path>
-   </svg>   
-sprite cloudiq <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 15.16h2.14v7.3h-2.14zM29.86 16.96h2.14v5.5h-2.14zM4.3 12h2.14v12.98h-2.14zM8.6 6.98h2.12v18h-2.12zM12.88 6.98h2.14v18h-2.14zM17.18 12h2.12v12.98h-2.12zM21.46 11.24h2.14v13.78h-2.14zM25.76 15.16h2.12v9.86h-2.12z"></path>
    </svg>
+
+rectangle infrastructure {
+card "<$datacenter> datacenter"
+card "<$rack> rack"
+card "<$modular> modular"
+}
+
+rectangle compute {
+card "<$server> server"
+card "<$storage-array> storage-array"
+card "<$node> node"
+}
+
+rectangle network {
+card "<$switch-blade> switch-blade"
+card "<$switch-blade-2u> switch-blade-2u"
+}
+rectangle edge {
+   card "<$thin-client> thin-client"
+   card "<$desktop> desktop"
+   card "<$mobile> mobile"
+   card "<$tablet-vert> tablet-vert"
+   card "<$tablet-horiz> tablet-horiz"
+   card "<$mobile> mobile"
+   }
+@enduml
+
+```
+</details>
+
+## Architecture Sprites
+<img src="./img/arch.png" width=800>
+<details>
+
+<summary>Show Code</summary>
+  
+```puml
+@startuml
+skinparam backgroundcolor #FEFFFF
    
-sprite nodes <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 11.040v10h32v-10zM29.86 18.82h-27.72v-5.64h27.72zM7.16 17.38c0.762 0 1.38-0.618 1.38-1.38s-0.618-1.38-1.38-1.38c-0.762 0-1.38 0.618-1.38 1.38v0c0 0.762 0.618 1.38 1.38 1.38v0z"></path>
-   </svg> 
-sprite thin-client <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M21.34 0h-10.68v25.78h10.68zM19.2 23.64h-6.4v-21.5h6.42v21.5zM17.080 6.82c0.003 0.030 0.005 0.065 0.005 0.1 0 0.596-0.484 1.080-1.080 1.080-0.002 0-0.003 0-0.005 0h0c-0.619 0-1.12-0.501-1.12-1.12s0.501-1.12 1.12-1.12v0c0 0 0 0 0 0 0.589 0 1.069 0.472 1.080 1.059l0 0.001zM14.94 11.38h2.14v8.62h-2.14zM7.76 28v4h2.24v-2h12.2v2h2.14v-4z"></path>
-   </svg> 
 sprite datastore <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M16 0c-7.28 0-13 3.020-13 6.9 0 0.18 0 18.4 0 18.58 0.36 3.72 5.94 6.52 13 6.52s12.58-2.78 12.98-6.46c0-0.22 0-18.46 0-18.64 0.020-3.88-5.7-6.9-12.98-6.9zM16 2.14c6.4 0 10.86 2.5 10.86 4.76s-4.46 4.76-10.86 4.76-10.86-2.52-10.86-4.76 4.46-4.76 10.86-4.76zM16 29.86c-6.24 0-10.64-2.36-10.86-4.52v-14.62c2.811 1.94 6.291 3.099 10.042 3.099 0.288 0 0.574-0.007 0.858-0.020l-0.040 0.002c0.244 0.012 0.53 0.019 0.818 0.019 3.751 0 7.231-1.159 10.102-3.138l-0.060 0.039v14.58c-0.24 2.2-4.66 4.56-10.86 4.56z"></path>
    </svg> 
@@ -87,48 +129,23 @@ sprite network-vert-disable <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M11.080 26.96h-5.080l-3.040 2h10.18v-6.96l-2 1.38zM2.64 19.84v0.88l1.36-0.88zM25.14 14.98h-1.48l-3.060 2h2.48v2.8h-4.22v9.18h10.5v-9.12h-4.22v-4.86zM27.3 22v5.060h-6.38v-5.060zM6.86 14.98v2.9l4.3-2.9zM15 12.38l0.32-0.22 3.060-2h-5.58v-5.12h6.4v4.5l2-1.38v-5.18h-10.46v9.18h4.26zM32 6.36l-1.16-1.7-30.84 20.82 1.16 1.72 18-12.22z"></path>
    </svg> 
 
-rectangle network {   
-   card "<$switch-blade> switch-blade"
-   card "<$switch-blade-2u> switch-blade-2u"
 
-rectangle states {
-   card "<$wifi> wifi"
-   card "<$wifi-none> wifi-none"
-   card "<$network-vert> network-vert"
-   card "<$network-vert-disable> network-vert-disable"
-   card "<$bluetooth> bluetooth"
-   card "<$cloud-wireless> cloud-wireless"
-   card "<$signal*.5> signal"
-   }
-
+rectangle connectivity {
+card "<$wifi> wifi"
+card "<$wifi-none> wifi-none"
+card "<$network-vert> network-vert"
+card "<$network-vert-disable> network-vert-disable"
+card "<$bluetooth> bluetooth"
 }
 
-rectangle datacenter {
-   card "<$datacenter> datacenter"
-   card "<$rack> rack"
-   card "<$nodes> nodes"
-   card "<$storage-array> storage-array"
-   card "<$server> server"
-   card "<$server-tower> server-tower"
-   card "<$modular> modular"
-   card "<$nodes> nodes"
-   card "<$datastore> datastore"
-   }
 
-rectangle edge {
-   card "<$thin-client> thin-client"
-   card "<$desktop> desktop"
-   card "<$mobile> mobile"
-   card "<$tablet-vert> tablet-vert"
-   card "<$tablet-horiz> tablet-horiz"
-   card "<$mobile> mobile"
-   }
+rectangle ideas {
+card "<$datastore> datastore"
+card "<$cloud-wireless> cloud-wireless"
+}
 
 @enduml
-
-
 ```
-</details>
 
 # Diagram as Code
 
