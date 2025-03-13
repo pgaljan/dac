@@ -1,0 +1,7 @@
+@startuml
+
+sprite switch-blade-2u <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M0 2.5v12h32v-12zM29.56 12h-27.12v-7.060h27.12zM20.92 7.28h6.34v2.44h-6.34zM0 29.5h32v-12h-32zM2.44 20h27.12v7.16h-27.12zM20.92 22.26h6.34v2.44h-6.34z"></path>
+   </svg>
+
+@enduml
