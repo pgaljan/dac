@@ -32,9 +32,6 @@ sprite tablet-horiz <svg width="32" height="32" viewBox="0 0 32 32">
 sprite modular <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M0 20.96h32v-10h-32zM2.14 13.18h27.72v5.64h-27.72zM0 0v10h32v-10zM29.86 7.78h-27.72v-5.64h27.72zM0 32h32v-10h-32zM2.14 24.22h27.72v5.64h-27.72zM5.34 14.94h21.32v2.12h-21.32zM5.34 26h5.34v2.12h-5.34z"></path>
    </svg>   
-sprite cloudiq <svg width="32" height="32" viewBox="0 0 32 32">
-    <path d="M0 15.16h2.14v7.3h-2.14zM29.86 16.96h2.14v5.5h-2.14zM4.3 12h2.14v12.98h-2.14zM8.6 6.98h2.12v18h-2.12zM12.88 6.98h2.14v18h-2.14zM17.18 12h2.12v12.98h-2.12zM21.46 11.24h2.14v13.78h-2.14zM25.76 15.16h2.12v9.86h-2.12z"></path>
-   </svg>
    
 sprite nodes <svg width="32" height="32" viewBox="0 0 32 32">
     <path d="M0 11.040v10h32v-10zM29.86 18.82h-27.72v-5.64h27.72zM7.16 17.38c0.762 0 1.38-0.618 1.38-1.38s-0.618-1.38-1.38-1.38c-0.762 0-1.38 0.618-1.38 1.38v0c0 0.762 0.618 1.38 1.38 1.38v0z"></path>
@@ -102,7 +99,6 @@ card "<$mobile> mobile"
 
 rectangle ideas {
 card "<$signal*.5> signal"
-card "<$cloudiq> cloudiq"
 card "<$datastore> datastore"
 card "<$cloud-wireless> cloud-wireless"
 }
