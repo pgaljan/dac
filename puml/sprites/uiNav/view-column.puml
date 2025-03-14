@@ -1,0 +1,9 @@
+@startuml
+
+sprite view-column <svg width="32" height="32" viewBox="0 0 32 32">
+
+    <path d="M22.72 0v32h8v-32zM28.58 29.86h-3.72v-27.72h3.72zM12 32h8v-32h-8zM14.14 2.14h3.72v27.72h-3.72zM1.28 32h8v-32h-8zM3.42 2.14h3.72v27.72h-3.72z"></path>
+
+  </svg>
+
+@enduml
