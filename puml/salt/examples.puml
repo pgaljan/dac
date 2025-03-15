@@ -1,0 +1,105 @@
+@startsalt salt_sample
+scale 1.5
+title this title
+header our header
+footer my footer
+caption your caption
+legend
+legend1
+legend2
+legend3
+|table|col|
+|<#f00>red|<#blue>blue|
+end legend
+{
+  {/ <color:gray>inactive | ** selected tab ** | <back:#ccc>inactive }
+  .
+  {^"group"
+    {
+      text | "textbox       "
+      label: | "              "
+    }
+    {
+      (X) checked radio button
+      ( ) unchecked radio button
+      [X] checked box
+      [ ] unchecked box
+    }
+  }
+  {+
+    with outer solid lines
+    .
+    "                   "
+  }
+  .
+  {
+    {SI
+      textarea
+      with
+      vertical scrollbar
+    } |
+    {S-
+      textarea
+      with
+      horizontal scrollbar
+    }
+  }
+  {T+
+    + root
+    ++ a
+    ++ branch
+    +++ leaf
+    ++ branch
+    +++ leaf
+    +++ leaf
+    +++ leaf
+  }
+  .
+  {
+    {-
+      aa | bb | cc
+      aaa | bbb | ccc
+      aaaa | bbbb | cccc
+    } | . |
+    {!
+      aa | bb | cc
+      aaa | bbb | ccc
+      aaaa | bbbb | cccc
+    } | . |
+    {#
+      . | <- empty | cc
+      aaa | colspan -> | *
+      aaaa | bbbb | cccc
+    }
+  }
+  .
+  {
+    droplist: | ^combobox^ | ^combobox^opened^opened^opened^
+  }
+  --
+  ..
+  ==
+  ~~
+  {
+    [Cancel] | [ OK ]
+  }
+
+  {
+    <<folder
+............
+.XXXXX......
+.X...X......
+.XXXXXXXXXX.
+.X........X.
+.X........X.
+.X........X.
+.X........X.
+.XXXXXXXXXX.
+............
+    >>
+  }
+  {
+    <<folder>> | <&folder>
+  }
+}
+@endsalt

@@ -586,8 +586,102 @@ title Regex Parsing
 
 # UI Mockup
 
-## All Together
-<img src="https://github.com/user-attachments/assets/2a41cf2d-389e-45d2-b2db-066cf090eeb3" width=500>
+## Web UI Spec Template
+<img src="./img/webui_spec.png" width=500>
+
+<details>
+
+  <summary>Show Code</summary>
+
+```plantuml
+@startsalt
+skinparam backgroundcolor #FEFFFF
+
+
+{
+{+
+{ 
+{
+' Tabs
+    {/  <b>Active  | <color:gray> Inactive  }                                                                         🗕 <&browser>  🗙}
+
+' Browser bar
+    {. 🡐 ⟳ ⌂ |{+  <&lock-locked>  https://url.anydomain.com                             }}
+--
+
+' Banner
+    {*<back:08206E><color:white>  Banner                                                                                          ⚙ 🛈 🤵}
+{
+
+ 
+' LeftNav
+{
+    <b>LeftNav
+    {T 
+        + LandingPage
+        + <b>ActivePage
+        + Administration
+        ++ Submenu
+
+
+    }
+}|
+
+' MainPanelHeader
+{
+    <b><back:08206E><color:white>ActivePage
+    <i><color:08206E>informational text
+' MainPanel
+{
+        {[Action]|.|^Menu^|      🝖 ▥ ⟳}
+    {T-
+        .|☐ | S | F |Label⏶|<b>Column 
+        <b><color:red>⌦ |☐| | <color:darkgreen>⚑ | ♺ |Label | Attribute 
+        <b><color:red>⌦ |☐| ⚐ | <color:darkorange>☢ |Label🏷️|  Attribute
+        <b><color:red>⌦ |☐| <color:red>⚑ | S |Label | Attribute 
+        <b><color:red>⌦ |☐| <color:darkred>🛇 | S |Label | Attribute 
+        <b><color:red>⌦ |☐| ⚐ | S |Label| Attribute 
+ 
+    }
+
+}| |
+{^"<b>Filter "
+{
+      { { <b>Saved Filters : 
+     ^       ^^ Filter1<color:darkgreen>⚑ ^^ Filter2<color:red>⚑^^<i><color:gray> Filter3</i>^
+}|
+{
+{           { Label: |     |{+       } }
+           { Attribute: |  |{+       } }
+           {N: | ( ) True | (X) False}
+           { Tag:        |{+^  Key   ^ |^ Value^}} }}
+
+           }}}}}}
+           
+           }
+'Footer
+{
+     {(X) Good  | () Better  | () Best}
+     {[X] SaaS  | [X] On-Prem  | [X] Disconnected}
+
+     --
+    {
+        <b>         Administrator  | [X] View | [X] Edit 
+        <b>                              Author | [X] View | [ ] Edit
+        <b>                    Contributor | [X] View | [ ] Edit
+        <b>                    Commenter | [X] View | [ ] Edit
+        <b>               Viewer | [X] View | [ ] Edit
+    }
+
+    }
+
+}
+
+@endsalt
+
+```
+</details>
+
 
 
 ## Components 
