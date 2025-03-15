@@ -35,31 +35,11 @@ json HostedModels {
 
 
 
-rectangle "AI Pipeline" {
+rectangle "AI Ops" {
+rectangle "AI Pipeline"{
     queue "feature pipeline" as featurePipe
     queue "training pipeline" as training
     queue "inference pipeline" as inference
-}
-
-json Outcomes {
-    "Generative":[
-        "Code Generation",
-        "Chatbot",
-        "Assistive Design",
-        "Data Creation"
-        ],
-    "Agentic":[
-        "Chat Agent",
-        "Digital Assitant"
-    ],
-    "Autonomous/Assistive":[
-        "Computer Vision",
-        "Digital Twin",
-        "Voice Processing"
-    ]
-}
-
-
 json OnPremModels {
     "Language":[
         "LLama",
@@ -90,10 +70,26 @@ json OnPremModels {
         "Gato"
     ]    
 }
-        
-        
+}
 
-
+json Outcomes {
+    "Generative":[
+        "Code Generation",
+        "Chatbot",
+        "Assistive Design",
+        "Data Creation"
+        ],
+    "Agentic":[
+        "Chat Agent",
+        "Digital Assitant"
+    ],
+    "Autonomous/Assistive":[
+        "Computer Vision",
+        "Digital Twin",
+        "Voice Processing"
+    ]
+}
+}
 
 rectangle "Operational Data" {
     database "sales" as salesdata
@@ -108,10 +104,10 @@ rectangle "Operational Data" {
 
 
 
-unstructured --> featurePipe
-structured --> featurePipe
-featurePipe -right-> training
-training -right-> inference
+unstructured -right-> featurePipe
+structured -right-> featurePipe
+featurePipe --> training
+training --> inference
 salesdata --> structured
 supplierdata --> structured
 message --> unstructured
@@ -123,7 +119,7 @@ ops --> structured
 HostedModels --> Outcomes
 inference --> OnPremModels
 OnPremModels --> Outcomes
-Outcomes --> "Operational Data"
+
 
 
 @enduml
