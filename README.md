@@ -587,7 +587,7 @@ title Regex Parsing
 # UI Mockup
 
 ## Web UI Spec Template
-<img src="./img/webui_spec.png" width=500>
+<img src="./img/webui_spec.png" width=800>
 
 <details>
 
