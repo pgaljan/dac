@@ -1,0 +1,35 @@
+```plantuml
+@startuml
+!include <office/Devices/router>
+!include <office/Devices/cell_phone_iphone_stand_alone>
+!include <office/Devices/device_laptop>
+!include <office/Devices/workstation_pc>
+!include <office/Devices/device_mac_client>
+!include <office/Devices/device_tv>
+!include <office/Servers/file_server>
+!include <office/Servers/on_premises_server>
+!include <office/Servers/windows_server>
+!include <office/Servers/web_server>
+
+nwdiag {
+    network internet {
+        router[ description = "<$router*.5>" ,address = "100.56.32.87" ] 
+        }
+
+    network internal {
+    router [ address = "10.10.100.1" ]
+        PC1 [description = "<$device_tv*.5>"]
+        PC2 [description = "<$cell_phone_iphone_stand_alone*.5>"]
+        PC3 [description = "<$device_laptop*.5>"]
+        PC4 [description = "<$workstation_pc*.5>"]
+        PC5 [description = "<$device_mac_client*.5>"] 
+    }
+    network labnetwork {
+    PC2 [address = 10.10.15.15]
+        Serv1 [description = "<$file_server*.5>"]
+        Serv2 [description = "<$on_premises_server*.5>"]
+        Serv3 [description = "<$windows_server*.5>"]
+        Serv4 [description = "<$web_server*.5>"]    
+    }
+}
+@enduml
