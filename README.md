@@ -584,7 +584,7 @@ title Regex Parsing
 
 </details>
 
-# UI Mockup
+# UI Spec
 
 ## Web UI Spec Template
 <img src="./img/webui_spec.png" width=800>
@@ -682,6 +682,70 @@ skinparam backgroundcolor #FEFFFF
 ```
 </details>
 
+
+## Mobile UI Spec Template
+<img src="./img/mobileUI.png" width=400>
+
+<details>
+
+  <summary>Show Code</summary>
+
+```plantuml
+
+@startsalt
+skinparam rectangle rounded
+{+
+' Device Status
+    {1:48  <&bell>                           <&wifi> <&battery-full>}
+--
+'Dashboard
+{
+               <&cloudy*3>
+          <&location>Anytown, USA
+               <size:20>49°
+           Feels like: 43°
+            H: 52° L: 38°
+}
+--
+'Summary
+{
+<size:9>Cloudy conditions will contiooue for the rest of the day.
+<size:9>Wind gusts up to 17mph are making the temperature 
+<size:9>feel like like 43.
+    
+    
+    {
+              | 6p | 7p | 8p | 9p | 10p
+              |<&cloudy>| <&bolt*1.5> | <&cloudy>| <&sun>| <&cloudy>
+               | 50° | 51° | 52° | 50° | 48°     
+     }
+
+}
+--
+'Detail
+<b>Details
+{T-
+    <&chevron-right*2> | <&location>Details | <i>Details| .| .|.|.| .|.|.
+    <&chevron-right*2> | <&location>Details | <i>Details
+    <&chevron-right*2> | <&location>Details| <i>Details
+    <&chevron-right*2> | <&location>Details| <i>Details
+    <&chevron-right*2> | <&location>Details| <i>Details
+} 
+
+{
+
+}
+--
+{
+     <&home*4>                        <&share*4>
+}
+}
+
+
+@endsa
+
+```
+</details>
 
 
 ## Components 

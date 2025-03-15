@@ -40,7 +40,7 @@ skinparam backgroundcolor #FEFFFF
         {[Action]|.|^Menu^|      🝖 ▥ ⟳}
     {T-
         .|☐ | S | F |Label⏶|<b>Column 
-        <b><color:red>⌦ |☐| | <color:darkgreen>⚑ | ♺ |Label | Attribute 
+        <b><color:red>⌦ |☐|  <color:darkgreen>⚑ | ♺ |Label | Attribute 
         <b><color:red>⌦ |☐| ⚐ | <color:darkorange>☢ |Label🏷️|  Attribute
         <b><color:red>⌦ |☐| <color:red>⚑ | S |Label | Attribute 
         <b><color:red>⌦ |☐| <color:darkred>🛇 | S |Label | Attribute 
@@ -55,12 +55,36 @@ skinparam backgroundcolor #FEFFFF
      ^       ^^ Filter1<color:darkgreen>⚑ ^^ Filter2<color:red>⚑^^<i><color:gray> Filter3</i>^
 }|
 {
-{           { Label: |     |{+       } }
-           { Attribute: |  |{+       } }
-           {N: | ( ) True | (X) False}
-           { Tag:        |{+^  Key   ^ |^ Value^}} }}
+{   
+    {       Label: | |{+       } }
+    {   Attribute: ||{+       } }
+     {          N: | [X] True }
+    { 
+               Tag: |{+^  Key   ^ |^ Value^}} }
+           
+    {
+        {.|.|.|.|.|.|.|.{
+            S:   | ^⚐^^<color:darkred> 🛇^^<color:darkgreen> ⚑^^<color:red> ⚑^
+        }|
+        {
+            F:   | ^♺^^<color:darkorange>☢ ^^S^
+        }}
+        
+    }
+    
+    
+    }
+    }
+    {.}
+    {.}
+    {.}
+    }
 
-           }}}}}}
+    }
+
+}
+           
+}}
            
            }
 'Footer
