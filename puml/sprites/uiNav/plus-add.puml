@@ -1,0 +1,9 @@
+@startuml
+
+sprite plus-add <svg width="32" height="32" viewBox="0 0 32 32">
+    <path d="M27 14.78h-9.78v-9.78h-2.44v9.78h-9.78v2.44h9.78v9.78h2.44v-9.78h9.78z"></path>
+
+
+   </svg> 
+
+@enduml
