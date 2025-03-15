@@ -9,7 +9,7 @@ PlantUML and Mermaid snippet repository for rapid diagramming and data modeling,
 # Diagram as Code
 
 ## Example:  Network Diagram
-<img src="./img/nwdial.png" width=300>
+<img src="./img/nwdial.png" width=600>
 
 <details>
 
