@@ -1,10 +1,11 @@
-PlantUML and Mermaid snippet repository for rapid diagramming and UI ideation
+PlantUML and Mermaid snippet repository for rapid diagramming and data modeling, and UX iteration
 
-* [Simple Sprite Library](#simple-sprite-library)
+
 * [Diagram as Code](#diagram-as-code)
+* [UI Spec as Code](#UI-Spec)
 * [Data Model Illustration](#data-model-illustration)
-* [UI Mockup](#UI-Mockup)
-
+* [Simple Sprite Library](#simple-sprite-library)
+  
 # Diagram as Code
 <img src="./img/ai_workflows.png" width=600>
 
