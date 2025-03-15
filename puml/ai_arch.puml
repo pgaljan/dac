@@ -1,0 +1,129 @@
+@startuml
+title AI Workflows
+
+
+json HostedModels {
+    "Language":[
+        "LLama",
+        "GPT-4o"
+    ],
+    "Audio/Speech":[
+        "Whisper",
+        "AudioLDM",
+        "MusicGen"
+    ],
+    "Video":[
+        "Sora",
+        "Lumiere",
+        "Gen-2"
+    ],
+    "Multimodal":[
+        "GPT-4V",
+        "Opus",
+        "Gemini Pro Vision"
+    ],
+    "3dGen":[
+        "Point-E",
+        "GET3D",
+        "Shap-E"
+    ],
+    "Code":[
+        "CoPilot"
+    ]   
+}
+
+
+
+
+rectangle "AI Pipeline" {
+    queue "feature pipeline" as featurePipe
+    queue "training pipeline" as training
+    queue "inference pipeline" as inference
+}
+
+json Outcomes {
+    "Generative":[
+        "Code Generation",
+        "Chatbot",
+        "Assistive Design",
+        "Data Creation"
+        ],
+    "Agentic":[
+        "Chat Agent",
+        "Digital Assitant"
+    ],
+    "Autonomous/Assistive":[
+        "Computer Vision",
+        "Digital Twin",
+        "Voice Processing"
+    ]
+}
+
+
+json OnPremModels {
+    "Language":[
+        "LLama",
+        "Deepseek"
+    ],
+
+    "Code":[
+        "CoPilot",
+        "Code Llama"
+    ],
+    "Biochem":[
+        "AlphaFold",
+        "RoseTTAFold",
+        "ESMFold"
+    ],
+    "Graph":[
+        "GraphTransformer",
+        "GraphGPS",
+        "GIANT"
+    ],
+    "Time Series":[
+        "TFT",
+        "N-BEATS",
+        "TimeGPT"
+    ],
+    "Reinforcement":[
+        "Muzero",
+        "Gato"
+    ]    
+}
+        
+        
+
+
+
+rectangle "Operational Data" {
+    database "sales" as salesdata
+    database "supplier" as supplierdata
+    database "message" as message
+    database "support" as support
+    database "ops" as ops
+    rectangle "unstructured data" as unstructured
+    rectangle "structured data" as structured    
+    file "file" as file   
+}
+
+
+
+unstructured --> featurePipe
+structured --> featurePipe
+featurePipe -right-> training
+training -right-> inference
+salesdata --> structured
+supplierdata --> structured
+message --> unstructured
+support --> unstructured
+file --> unstructured
+ops --> unstructured
+ops --> structured
+
+HostedModels --> Outcomes
+inference --> OnPremModels
+OnPremModels --> Outcomes
+Outcomes --> "Operational Data"
+
+
+@enduml
