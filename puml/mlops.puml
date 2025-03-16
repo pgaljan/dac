@@ -9,45 +9,55 @@
 !include <logos/grafana>
 !include <logos/apache>
 !include <logos/facebook>
+!include <logos/postgresql>
+sprite mlflow ../img/mlflow.svg
+sprite evidentlyai ../img/evidentlyai.png
+sprite timescale ../img/timescale.svg
+sprite feast ../img/feast_logo.png
+sprite spark ../img/spark.png
+sprite flink ../img/flink.png
+sprite metaverse ../img/meta.png
+sprite telegraf ../img/telegraf.png
+sprite minio ../img/MINIO_Bird.png
 
 Title MLOps Pipeline
 rectangle "Data Ingestion" {
     rectangle filebeat as "<$beats*.25> Filebeat\n<color:gray><size:9>Unstructured, Logs"
-    rectangle telegraf as "Telegraf\n<color:gray><size:9>Metrics"
+    rectangle telegraf as "<$telegraf*.1> Telegraf\n<color:gray><size:9>Metrics"
     rectangle prometheus as "<$prometheus*.4> Prometheus\n<color:gray><size:9>Alerts"
     rectangle gitops as "<$git-icon*.5> GitOps Agent\n<color:gray><size:9>Configuration drift"
     rectangle elasticAgent as "<$endpoint*.25> Elastic Agent\n<color:gray><size:9>Security Events"
     rectangle kafka as "<$kafka-icon*.3> Kafka\n<color:gray><size:9>Message Bus"
 }
 rectangle "Data Processing" {
-    rectangle flink as "<$apache*.3> Flink\n<color:gray><size:9>Streaming Data Processing"
-    rectangle spark as "<$apache*.3> Spark\n<color:gray><size:9>Aggregation & Transformation"
-    rectangle feast as "Feast\n<color:gray><size:9>Feature Store"
-    rectangle prophet as "<$facebook*.3> Prophet\n<color:gray><size:9>Anomaly Detection" 
+    rectangle flink as "<$flink*.2> Flink\n<color:gray><size:9>Streaming Data\n<color:gray><size:9>Processing"
+    rectangle spark as "<$spark*.06>\n<color:gray><size:9>Aggregation\n<color:gray><size:9>& Transformation"
+    rectangle feast as "<$feast*.015>\n<color:gray><size:9>Feature Store"
+    rectangle prophet as "<$metaverse*.03> Prophet\n<color:gray><size:9>Anomaly Detection" 
 }
 rectangle "Data Storage" {
-    rectangle timescaledb as "TimescaleDB\n<color:gray><size:9>Timeseries Data Store"
+    rectangle timescaledb as "<$timescale*.015>\n        TimescaleDB\n<color:gray><size:9>      Timeseries Data Store"
     rectangle mongodb as "<$mongodb-icon*.2> MongoDB\n<color:gray><size:9>Unstrucured data store"
-    rectangle minio as "MinIO\n<color:gray><size:9>Object Store"
-    rectangle PostgresSQL as "MinIO\n<color:gray><size:9>Structured data"
+    rectangle minio as "<$minio*.015> MinIO\n<color:gray><size:9>Object Store"
+    rectangle PostgresSQL as "<$postgresql*.3> PostgreSQL\n<color:gray><size:9>Structured data"
 }
 rectangle "ML Pipeline" {
-    rectangle mlflow as "MLFlow\n<color:gray><size:9>ML orchestration"
+    rectangle mlflow as "<$mlflow*.5>\n\n<color:gray><size:9>ML orchestration"
     rectangle trainingpipeline as "Training Pipeline"
     rectangle modelregistry as "Model Registry\n<color:gray><size:9>Model registry"
     rectangle seldoncore as "Seldon Core\n<color:gray><size:9>Advanced serving patterns\n<color:gray><size:9>(canary, shadow)"
     rectangle inferenceapi as "Inference API"
 }
-rectangle "Observability" {
-    rectangle grafana as "<$grafana*.35> Grafana\n<color:gray><size:9>Visualization"
-    rectangle evidentlyai as "Evidently AI\n<color:gray><size:9>Model performance\n<color:gray><size:9>& drift"
-    queue pipeline {
-    rectangle modelmonitoring as "Model Monitoring"
-    rectangle driftdetection as "Drift Detection"
-    rectangle retrainingtrigger as "Retraining Trigger"
-}
+
+    rectangle "Observability Pipeline" {
+        rectangle evidentlyai as "<$evidentlyai*.15>\n<color:gray><size:9>Model performance\n<color:gray><size:9>& drift"
+        rectangle modelmonitoring as "Model Monitoring"
+        rectangle driftdetection as "Drift Detection"
+        rectangle retrainingtrigger as "Retraining Trigger"
+
 }
 rectangle "Feedback Loop" {
+    rectangle grafana as "<$grafana*.35> Grafana\n<color:gray><size:9>Visualization"
     rectangle humandfeedback as "Human Feedback\n<color:gray><size:9>Human training"
     rectangle activelearning as "Active Learning\n<color:gray><size:9>Ambiguous samples"
 }
@@ -79,11 +89,11 @@ inferenceapi --> humandfeedback
 humandfeedback --> activelearning
 activelearning --> trainingpipeline
 
-seldoncore --> evidentlyai
+seldoncore -up-> evidentlyai
 evidentlyai--> modelmonitoring
 modelmonitoring --> driftdetection
 driftdetection --> retrainingtrigger
-driftdetection--> trainingpipeline
+retrainingtrigger --> trainingpipeline
 
 mongodb --> grafana
 timescaledb --> grafana
