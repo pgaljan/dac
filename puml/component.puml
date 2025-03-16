@@ -1,5 +1,8 @@
 @startuml
 skinparam componentStyle rectangle
+!include <logos/admob>
+!include <logos/adobe-illustrator>
+
 
 title Component Diagram
 

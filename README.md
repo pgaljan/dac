@@ -8,152 +8,105 @@ PlantUML and Mermaid snippet repository for rapid diagramming and data modeling,
   
 # Diagram as Code
 
-## Example:  Network Diagram
-<img src="./img/nwdial.png" width=600>
-
-<details>
-
-```plantuml
-@startuml
-!include <office/Devices/router>
-!include <office/Devices/cell_phone_iphone_stand_alone>
-!include <office/Devices/device_laptop>
-!include <office/Devices/workstation_pc>
-!include <office/Devices/device_mac_client>
-!include <office/Devices/device_tv>
-!include <office/Servers/file_server>
-!include <office/Servers/on_premises_server>
-!include <office/Servers/windows_server>
-!include <office/Servers/web_server>
-
-nwdiag {
-    network internet {
-        router[ description = "<$router*.5>" ,address = "100.56.32.87" ] 
-        }
-
-    network internal {
-    router [ address = "10.10.100.1" ]
-        PC1 [description = "<$device_tv*.5>"]
-        PC2 [description = "<$cell_phone_iphone_stand_alone*.5>"]
-        PC3 [description = "<$device_laptop*.5>"]
-        PC4 [description = "<$workstation_pc*.5>"]
-        PC5 [description = "<$device_mac_client*.5>"] 
-    }
-    network labnetwork  {
-        PC2 [address = 10.10.15.15]
-        Serv1 [description = "<$file_server*.5>"]
-        Serv2 [description = "<$on_premises_server*.5>"]
-        Serv3 [description = "<$windows_server*.5>"]
-        Serv4 [description = "<$web_server*.5>"]    
-    }
-}
-@enduml
-```
-
-</details>
-
 ## Example:  MLOps Workflow
-```mermaid
-flowchart TB
-    subgraph Data Ingestion
-        A[Filebeat] --> |Logs| C[Kafka]
-        B[Telegraf] --> |Metrics| C
-        D[Prometheus] --> |Alerts| C
-        E[GitOps Agent] --> |Config Changes| C
-        F[Elastic Agent] --> |Security Events| C
-    end
-    
-    subgraph Data Processing
-        C --> G[Apache Flink]
-        G --> H[Feature Store - Feast]
-        G --> I[Anomaly Detection - Prophet]
-        G --> J["Real-time Processing\n(Spark Streaming)"]
-    end
-    
-    subgraph Data Storage
-        H --> K[MinIO]
-        I --> K
-        J --> L[TimescaleDB]
-        J --> M[MongoDB]
-    end
-    
-    subgraph ML Pipeline
-        K --> N[MLflow]
-        N --> O[Training Pipeline]
-        O --> P[Model Registry]
-        P --> Q[Seldon Core]
-        Q --> R[Inference API]
-    end
-    
-    subgraph Feedback Loop
-        R --> S[Human Feedback]
-        S --> T[Active Learning]
-        T --> O
-    end
-    
-    subgraph Observability
-        L --> U[Grafana]
-        M --> U
-        Q --> V[Evidently AI]
-        V --> W[Model Monitoring]
-        W --> X[Drift Detection]
-        X --> Y[Retraining Trigger]
-        Y --> O
-    end
-```
+<img src="./img/mlops.png" width=500>
 
 <details>
 <summary>Show Code</summary>
 
 ```
-flowchart TB
-    subgraph Data Ingestion
-        A[Filebeat] --> |Logs| C[Kafka]
-        B[Telegraf] --> |Metrics| C
-        D[Prometheus] --> |Alerts| C
-        E[GitOps Agent] --> |Config Changes| C
-        F[Elastic Agent] --> |Security Events| C
-    end
-    
-    subgraph Data Processing
-        C --> G[Apache Flink]
-        G --> H[Feature Store - Feast]
-        G --> I[Anomaly Detection - Prophet]
-        G --> J["Real-time Processing\n(Spark Streaming)"]
-    end
-    
-    subgraph Data Storage
-        H --> K[MinIO]
-        I --> K
-        J --> L[TimescaleDB]
-        J --> M[MongoDB]
-    end
-    
-    subgraph ML Pipeline
-        K --> N[MLflow]
-        N --> O[Training Pipeline]
-        O --> P[Model Registry]
-        P --> Q[Seldon Core]
-        Q --> R[Inference API]
-    end
-    
-    subgraph Feedback Loop
-        R --> S[Human Feedback]
-        S --> T[Active Learning]
-        T --> O
-    end
-    
-    subgraph Observability
-        L --> U[Grafana]
-        M --> U
-        Q --> V[Evidently AI]
-        V --> W[Model Monitoring]
-        W --> X[Drift Detection]
-        X --> Y[Retraining Trigger]
-        Y --> O
-    end
-    ```
+@startuml
+!include <logos/prometheus>
+!include <elastic/beats/beats>
+!include <elastic/endpoint/endpoint>
+!include <logos/git-icon>
+!include <logos/kafka-icon>
+!include <tupadr3/devicons2/mongodb>
+!include <logos/mongodb-icon>
+!include <logos/grafana>
+!include <logos/apache>
+!include <logos/facebook>
 
+Title MLOps Pipeline
+rectangle "Data Ingestion" {
+    rectangle filebeat as "<$beats*.25> Filebeat\n<color:gray><size:9>Unstructured, Logs"
+    rectangle telegraf as "Telegraf\n<color:gray><size:9>Metrics"
+    rectangle prometheus as "<$prometheus*.4> Prometheus\n<color:gray><size:9>Alerts"
+    rectangle gitops as "<$git-icon*.5> GitOps Agent\n<color:gray><size:9>Configuration drift"
+    rectangle elasticAgent as "<$endpoint*.25> Elastic Agent\n<color:gray><size:9>Security Events"
+    rectangle kafka as "<$kafka-icon*.3> Kafka\n<color:gray><size:9>Message Bus"
+}
+rectangle "Data Processing" {
+    rectangle flink as "<$apache*.3> Flink\n<color:gray><size:9>Streaming Data Processing"
+    rectangle spark as "<$apache*.3> Spark\n<color:gray><size:9>Aggregation & Transformation"
+    rectangle feast as "Feast\n<color:gray><size:9>Feature Store"
+    rectangle prophet as "<$facebook*.3> Prophet\n<color:gray><size:9>Anomaly Detection" 
+}
+rectangle "Data Storage" {
+    rectangle timescaledb as "TimescaleDB\n<color:gray><size:9>Timeseries Data Store"
+    rectangle mongodb as "<$mongodb-icon*.2> MongoDB\n<color:gray><size:9>Unstrucured data store"
+    rectangle minio as "MinIO\n<color:gray><size:9>Object Store"
+    rectangle PostgresSQL as "MinIO\n<color:gray><size:9>Structured data"
+}
+rectangle "ML Pipeline" {
+    rectangle mlflow as "MLFlow\n<color:gray><size:9>ML orchestration"
+    rectangle trainingpipeline as "Training Pipeline"
+    rectangle modelregistry as "Model Registry\n<color:gray><size:9>Model registry"
+    rectangle seldoncore as "Seldon Core\n<color:gray><size:9>Advanced serving patterns\n<color:gray><size:9>(canary, shadow)"
+    rectangle inferenceapi as "Inference API"
+}
+rectangle "Observability" {
+    rectangle grafana as "<$grafana*.35> Grafana\n<color:gray><size:9>Visualization"
+    rectangle evidentlyai as "Evidently AI\n<color:gray><size:9>Model performance\n<color:gray><size:9>& drift"
+    queue pipeline {
+    rectangle modelmonitoring as "Model Monitoring"
+    rectangle driftdetection as "Drift Detection"
+    rectangle retrainingtrigger as "Retraining Trigger"
+}
+}
+rectangle "Feedback Loop" {
+    rectangle humandfeedback as "Human Feedback\n<color:gray><size:9>Human training"
+    rectangle activelearning as "Active Learning\n<color:gray><size:9>Ambiguous samples"
+}
+
+filebeat --> kafka
+telegraf --> kafka
+prometheus --> kafka
+gitops --> kafka
+elasticAgent --> kafka
+
+kafka--> flink
+
+flink--> spark
+flink --> feast
+flink --> prophet 
+
+spark --> timescaledb
+spark --> mongodb
+feast --> minio
+prophet --> minio
+
+minio --> mlflow
+mlflow --> trainingpipeline
+trainingpipeline --> modelregistry
+modelregistry --> seldoncore
+seldoncore --> inferenceapi
+
+inferenceapi --> humandfeedback
+humandfeedback --> activelearning
+activelearning --> trainingpipeline
+
+seldoncore --> evidentlyai
+evidentlyai--> modelmonitoring
+modelmonitoring --> driftdetection
+driftdetection --> retrainingtrigger
+driftdetection--> trainingpipeline
+
+mongodb --> grafana
+timescaledb --> grafana
+grafana --> humandfeedback
+@enduml
+```
 </details>
 
 ## Example:  Enterprise AI Ecosystem
@@ -296,6 +249,53 @@ Outcomes --> "Operational Data"
 ```
 </details>
 
+
+
+
+
+## Example:  Network Diagram
+<img src="./img/nwdial.png" width=600>
+
+<details>
+
+```plantuml
+@startuml
+!include <office/Devices/router>
+!include <office/Devices/cell_phone_iphone_stand_alone>
+!include <office/Devices/device_laptop>
+!include <office/Devices/workstation_pc>
+!include <office/Devices/device_mac_client>
+!include <office/Devices/device_tv>
+!include <office/Servers/file_server>
+!include <office/Servers/on_premises_server>
+!include <office/Servers/windows_server>
+!include <office/Servers/web_server>
+
+nwdiag {
+    network internet {
+        router[ description = "<$router*.5>" ,address = "100.56.32.87" ] 
+        }
+
+    network internal {
+    router [ address = "10.10.100.1" ]
+        PC1 [description = "<$device_tv*.5>"]
+        PC2 [description = "<$cell_phone_iphone_stand_alone*.5>"]
+        PC3 [description = "<$device_laptop*.5>"]
+        PC4 [description = "<$workstation_pc*.5>"]
+        PC5 [description = "<$device_mac_client*.5>"] 
+    }
+    network labnetwork  {
+        PC2 [address = 10.10.15.15]
+        Serv1 [description = "<$file_server*.5>"]
+        Serv2 [description = "<$on_premises_server*.5>"]
+        Serv3 [description = "<$windows_server*.5>"]
+        Serv4 [description = "<$web_server*.5>"]    
+    }
+}
+@enduml
+```
+
+</details>
 
 ## Component
 
