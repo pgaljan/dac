@@ -11,7 +11,6 @@ PlantUML and Mermaid snippet repository for rapid diagramming and data modeling,
 ## Example:  MLOps Workflow
 <img src="./img/mlops.png" width=500>
 
-
 <i> note:  some of the sprites are locally loaded
 
 <details>

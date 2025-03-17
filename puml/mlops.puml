@@ -1,3 +1,4 @@
+```plantuml
 @startuml
 !include <logos/prometheus>
 !include <elastic/beats/beats>
@@ -19,8 +20,8 @@ sprite flink ../img/flink.png
 sprite metaverse ../img/meta.png
 sprite telegraf ../img/telegraf.png
 sprite minio ../img/MINIO_Bird.png
+sprite seldon ../img/seldon.jpeg
 
-Title MLOps Pipeline
 rectangle "Data Ingestion" {
     rectangle filebeat as "<$beats*.25> Filebeat\n<color:gray><size:9>Unstructured, Logs"
     rectangle telegraf as "<$telegraf*.1> Telegraf\n<color:gray><size:9>Metrics"
@@ -39,13 +40,12 @@ rectangle "Data Storage" {
     rectangle timescaledb as "<$timescale*.015>\n        TimescaleDB\n<color:gray><size:9>      Timeseries Data Store"
     rectangle mongodb as "<$mongodb-icon*.2> MongoDB\n<color:gray><size:9>Unstrucured data store"
     rectangle minio as "<$minio*.015> MinIO\n<color:gray><size:9>Object Store"
-    rectangle PostgresSQL as "<$postgresql*.3> PostgreSQL\n<color:gray><size:9>Structured data"
 }
 rectangle "ML Pipeline" {
     rectangle mlflow as "<$mlflow*.5>\n\n<color:gray><size:9>ML orchestration"
     rectangle trainingpipeline as "Training Pipeline"
     rectangle modelregistry as "Model Registry\n<color:gray><size:9>Model registry"
-    rectangle seldoncore as "Seldon Core\n<color:gray><size:9>Advanced serving patterns\n<color:gray><size:9>(canary, shadow)"
+    rectangle seldoncore as "<$seldon*.1>  Core\n<color:gray><size:9>Deployment patterns"
     rectangle inferenceapi as "Inference API"
 }
 
@@ -80,16 +80,16 @@ feast --> minio
 prophet --> minio
 
 minio --> mlflow
-mlflow --> trainingpipeline
-trainingpipeline --> modelregistry
-modelregistry --> seldoncore
-seldoncore --> inferenceapi
+mlflow -right-> trainingpipeline
+trainingpipeline -right-> modelregistry
+modelregistry -right-> seldoncore
+seldoncore -right-> inferenceapi
 
 inferenceapi --> humandfeedback
 humandfeedback --> activelearning
 activelearning --> trainingpipeline
 
-seldoncore -up-> evidentlyai
+seldoncore --> evidentlyai
 evidentlyai--> modelmonitoring
 modelmonitoring --> driftdetection
 driftdetection --> retrainingtrigger
@@ -99,3 +99,4 @@ mongodb --> grafana
 timescaledb --> grafana
 grafana --> humandfeedback
 @enduml
+```

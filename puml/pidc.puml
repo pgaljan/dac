@@ -1,0 +1,72 @@
+@startuml
+
+sprite clearcase ../img/clearcase.png
+sprite sun ../img/sun.png
+sprite oracledb ../img/oracledb.png
+sprite zfs ../img/zfs.png
+sprite tuxedo ../img/tuxedo.gif
+sprite maxwell ../img/maxwell.svg
+sprite rsa ../img/rsa.png
+sprite matplotlib ../img/matplotlib.png
+
+
+
+        rectangle seismic
+        rectangle hydroacoustic
+        rectangle infrasound
+
+        rectangle radionuclide
+        rectangle auxiliary
+        rectangle supplemental
+
+
+
+    rectangle ingest as "<$sun*.05> NFS\n<size:9><color:gray>Ingest Repo"
+    database archiveDB as "<$oracledb*.3>\n<size:9><color:gray>Archive DB"
+    database opsDB as "<$oracledb*.3>\n<size:9><color:gray>Operations DB"
+    file opsData as "<$sun*.05> NFS\n<size:9><color:gray>Ops"
+    file archiveData as "<$zfs*.03>\n<size:9><color:gray>Archive"
+
+
+    rectangle clearcase as "<$clearcase*.08>\n<size:9><color:gray>Change Management"
+    rectangle Tuxedo as "<$tuxedo*.5>\n<size:9><color:gray>API Services"
+
+    queue mlpipe as "<$maxwell*.1>\n\n<size:9><color:gray>Machine Learning Pipeline"
+    queue observepipe as "<$maxwell*.1>\n\n<size:9><color:gray>Observability Pipeline"
+    rectangle visualization as "<$matplotlib*.1> Gnuplot\n<size:9><color:gray>Visualization"
+    rectangle auth as "Authentication"
+    
+
+person analyst
+file "reviewed\nevent bulletin"
+'streaming --> ingest
+'periodic --> ingest
+
+ingest <--> auth
+
+opsDB --> mlpipe
+archiveDB -->observepipe
+archiveDB <--> archiveData
+opsDB <--> opsData
+
+ingest --> archiveDB
+ingest --> opsDB
+
+mlpipe <--> Tuxedo
+observepipe <--> Tuxedo
+Tuxedo <-left-> clearcase
+Tuxedo --> visualization
+
+seismic --> ingest
+hydroacoustic --> ingest
+infrasound --> ingest
+radionuclide ..> ingest
+auxiliary ..> ingest
+supplemental ..> ingest
+
+visualization -left-> analyst
+analyst -up-> observepipe
+
+analyst -left-> "reviewed\nevent bulletin"
+
+@enduml
