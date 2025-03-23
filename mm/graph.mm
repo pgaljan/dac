@@ -1,3 +1,4 @@
+```mermaid
 graph LR
 
 subgraph Group 1
@@ -26,3 +27,4 @@ Item6 --> Item5
 
 Item5 --> Item8
 Item8 --> Item7
+```

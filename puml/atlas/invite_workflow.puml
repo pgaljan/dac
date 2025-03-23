@@ -1,0 +1,18 @@
+@startuml
+person userA
+person admin
+person userB
+rectangle Atlas
+
+userA --> admin : 1. request invites
+admin --> Atlas : 2. increment invites
+userA --> Atlas : 3. generate code
+Atlas --> userA : 4. copy/export
+userA --> userB : 5. use code XYZ123
+userB --> Atlas : 6. "code XYZ123" "
+Atlas --> userB : 7. SSO registration
+Atlas --> Atlas : 8. userA invite count decrement
+
+@enduml
+
+

@@ -1,0 +1,71 @@
+@startsalt
+skinparam backgroundcolor #FEFFFF
+'!!include <tupadr3/font-awesome-6/copy>
+'!include <tupadr3/font-awesome-6/copyright>
+!include <tupadr3/font-awesome-5/copy>
+'!include <tupadr3/font-awesome-5/copyright>
+'!include <tupadr3/material/content_copy>
+'!include <tupadr3/material/copyright>
+'!include <tupadr3/font-awesome/copy>
+'!include <tupadr3/font-awesome/copyright>
+'!include <cloudinsight/copy>
+'!include <logos/adobe-incopy>
+'!include <logos/copyleft-pirate>
+'!include <logos/copyleft>
+'!include <material/content_copy>
+'!include <material/copyright>
+
+{
+{
+{+        {*  Invite}
+{
+
+{
+    { 
+      <b>Share the fun!  
+      {.}
+      Share these single-use (tokens or passcodes) with your 
+    colleagues and friends to create structures of their own.
+{.}
+      Structure sharing is coming soon!
+Invites Granted: 14
+Invites Generated: 7
+Invites Accepted: 3
+
+--
+
+{[Add]|[Export]|[ ] Filter accepted invites}
+--
+{T-
+ <b>Token  | <b>Generated | <b>Accepted | <b>Actions
+  17ef26   | timestamp | . | ⎘ <color:red><&trash*1.6>
+  32eba9   | timestamp | . | ⎘ <color:red><&trash*1.6>
+  ca7bad | timestamp | . | ⎘ <color:red><&trash*1.6>
+  34c8af | timestamp | . | ⎘ <color:red><&trash*1.6>
+  c4187d | timestamp | timestamp | ⎘ 
+  7a755a | timestamp | timestamp | ⎘ 
+  bee904 | timestamp | timestamp | ⎘ 
+}
+{                                            |[Close]}
+}
+}
+}
+}
+<b>Notes:
+
+- Modal is triggered from the ✉(#/∞) Iconography on the banner
+- Tokens do not expire
+- Row level actions are Delete and Copy to Clipboard
+      - Unused tokens may be copied deleted
+      - Used tokens may be copied but not deleted
+- User regsitration workflow demands an unused token
+- when the token is successfully used to onaboard a user,
+ the user's invites are decremented.  This implies that 
+- User may not generate more tokens than they have total invites
+(this user would be able to create four more tokens)
+- Admins can generate an arbitrary number of tokens
+- Export to excel, straight table of token/generated/accepted
+
+}
+}
+@endsalt

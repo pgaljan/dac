@@ -1,0 +1,81 @@
+@startsalt
+skinparam backgroundcolor #FEFFFF
+'!include <tupadr3/font-awesome-6/toggle_off>
+'!include <tupadr3/font-awesome-6/toggle_on>
+'!include <tupadr3/font-awesome-5/toggle_off>
+'!include <tupadr3/font-awesome-5/toggle_on>
+'!include <tupadr3/font-awesome/toggle_down>
+'!include <tupadr3/font-awesome/toggle_left>
+!include <tupadr3/font-awesome/toggle_off>
+!include <tupadr3/font-awesome/toggle_on>
+
+{
+{+
+{ 
+{
+' Tabs
+    {/  <b>Atlas   }                                                                          🗕 <&browser>  🗙}
+
+' Browser bar
+    {. 🡐 ⟳ ⌂ |{+  <&lock-locked>  https://dev.atlasflow.co                             }}
+--
+
+' Banner
+    {*<back:#660000><color:white> Welcome, Another Admin User                                                       ✉(∞)  🤵}
+{
+
+ 
+' LeftNav
+
+{
+    {.}
+    --
+    {T 
+        + Dashboard
+        + <back:#660000><color:white><b>Users
+        + My Backups
+
+
+    }
+}|
+
+' MainPanelHeader
+{
+    <b><back:#660000><color:white> Users  
+
+' MainPanel
+{
+        {                              |[Export Users]}
+--
+    {T-
+        <b> User | <b>email⏶ | <b>Admin | <b> status | <b>Invites | <b> Actions
+        <&person> Regular User | user@aaar.com | <$toggle_off*.3> | <$toggle_on*.3>| 14 ⏶⏷ | <color:red><&trash*1.6>
+        <&person> Admin User | user@domain.com | <$toggle_on*.3> | <$toggle_on*.3>| . | <color:red><&trash*1.6>
+        <&person> Another Admin User | user@google.com | <$toggle_on*.3> | <$toggle_off*.3>| . | <color:red><&trash*1.6>
+        <&person> Another Regular User | user@user.com | <$toggle_off*.3> | <$toggle_on*.3>| 53 ⏶⏷ | <color:red><&trash*1.6>
+
+ 
+    }
+
+}| |
+
+           
+           
+           
+}}}
+           
+           }
+'Footer
+{
+     {[X] Personal  | [X] Educator  | [X] Analyst  | [X] Business }
+     {[ ] User  | [X] Admin }
+
+
+    }
+<b>Notes:  
+Filter on User, Email.  
+Sort on User, Email, Admin, Status
+Admins get unlimited Invites
+
+}
+}

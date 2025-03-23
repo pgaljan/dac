@@ -80,10 +80,10 @@ feast --> minio
 prophet --> minio
 
 minio --> mlflow
-mlflow -right-> trainingpipeline
-trainingpipeline -right-> modelregistry
-modelregistry -right-> seldoncore
-seldoncore -right-> inferenceapi
+mlflow --> trainingpipeline
+trainingpipeline --> modelregistry
+modelregistry --> seldoncore
+seldoncore --> inferenceapi
 
 inferenceapi --> humandfeedback
 humandfeedback --> activelearning
