@@ -1,4 +1,5 @@
 ```mermaid
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
 graph LR
 
 subgraph Group 1
