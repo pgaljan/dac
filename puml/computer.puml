@@ -1,0 +1,83 @@
+@startuml
+skinparam {
+  BackgroundColor transparent
+  ArrowColor black
+  BorderColor black
+  NodeBackgroundColor lightblue
+  NodeBorderColor black
+}
+
+rectangle "Computer System" {
+  rectangle "Hardware" {
+    rectangle "Input Devices" as input {
+      rectangle "Keyboard"
+      rectangle "Mouse"
+      rectangle "Scanner"
+      rectangle "Microphone"
+    }
+    
+    rectangle "Processing" as processing {
+      rectangle "CPU" {
+        rectangle "Control Unit"
+        rectangle "ALU"
+        rectangle "Registers"
+        rectangle "Cache"
+      }
+      
+      rectangle "Motherboard" {
+        rectangle "BIOS/UEFI"
+        rectangle "Chipset"
+      }
+      
+      rectangle "Memory" {
+        rectangle "RAM"
+        rectangle "ROM"
+      }
+    }
+    
+    rectangle "Storage" as storage {
+      rectangle "Primary" {
+        rectangle "SSD"
+        rectangle "HDD"
+      }
+      rectangle "Secondary" {
+        rectangle "Optical Drive"
+        rectangle "External Drive"
+      }
+    }
+    
+    rectangle "Output Devices" as output {
+      rectangle "Monitor"
+      rectangle "Printer"
+      rectangle "Speakers"
+    }
+    
+    rectangle "Peripherals" as peripherals {
+      rectangle "Graphics Card"
+      rectangle "Sound Card"
+      rectangle "Network Interface Card"
+      rectangle "Power Supply Unit"
+      rectangle "Cooling System"
+    }
+  }
+  
+  rectangle "Software" {
+    rectangle "System Software" {
+      rectangle "Operating System"
+      rectangle "Device Drivers"
+      rectangle "Utilities"
+    }
+    
+    rectangle "Application Software" {
+      rectangle "Productivity Apps"
+      rectangle "Multimedia Apps"
+      rectangle "Development Tools"
+    }
+  }
+}
+
+input -[#green]-> processing : Data flow
+processing -[#blue]-> storage : Read/Write data
+processing -[#red]-> output : Send results
+peripherals -[#purple]-> processing : Support processing
+@enduml
